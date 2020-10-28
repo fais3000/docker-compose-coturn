@@ -1,5 +1,7 @@
 version: "3.3"
 services:
   coturn:
-    network_mode: host
+    container_name: "coturn"
     image: instrumentisto/coturn
+    restart: unless-stopped
+    network_mode: host
